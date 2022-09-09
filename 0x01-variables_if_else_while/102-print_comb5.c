@@ -5,33 +5,30 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 Success
+ * Return: Always 0
  */
 int main(void)
 {
 	int p, q;
 
-	for (p = 0; p <= 100; p++)
+	for (p = 0; p <=98; p++)
 	{
-		for (q = + 1; q <= 100; q++)
+		for (q = p + 1; q <= 99; p++)
 		{
-			if (q > p)
-			{
-				putchar((p / 10) + '0');
-				putchar((p % 10) + '0');
-				putchar(' ');
-				putchar((q / 10) + '0');
-				putchar((q % 10) + '0');
+			putchar((p / 10) + '0');
+			putchar((p % 10) + '0');
+			putchar(' ');
+			putchar((q / 10) + '0');
+			putchar((q % 10) + '0');
 
-				if (p != 98)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+			if ( p == 98 && q == 99)
+				continue;
+
+			putchar(',');
+			putchar(' ');
 		}
 	}
 
 	putchar('\n');
-
 	return (0);
 }
