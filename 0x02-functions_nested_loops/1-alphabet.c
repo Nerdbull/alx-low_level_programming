@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * main - Check the code
  *
@@ -6,11 +7,11 @@
  */
 void print_alphabet(void)
 {
-	char c;
+	char i;
 
-	for (c = 'a'; c <= 'z'; c++)
+	for (i = 'a'; i <= 'z'; i++)
 	{
-		_putchar(c);
+		_putchar(i);
 	}
 	_putchar('\n');
 }
