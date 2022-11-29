@@ -12,7 +12,6 @@ char **strtow(char *str);
  *
  * Return: The index marking the end of the initial word pointed to by str.
  */
-
 int word_len(char *str)
 {
 	int index = 0, len = 0;
@@ -32,7 +31,6 @@ int word_len(char *str)
  *
  * Return: The number of words contained within str.
  */
-
 int count_words(char *str)
 {
 	int index = 0, words = 0, len = 0;
@@ -59,7 +57,6 @@ int count_words(char *str)
  * Return: If str = NULL, str = "", or the function fails - NULL.
  * Otherwise - a pointer to an array of strings (words).
  */
-
 char **strtow(char *str)
 {
 	char **strings;
@@ -70,6 +67,10 @@ char **strtow(char *str)
 
 	words = count_words(str);
 	if (words == 0)
+		return (NULL);
+
+	strings = malloc(sizeof(char *) * (words + 1));
+	if (strings == NULL)
 		return (NULL);
 
 	for (w = 0; w < words; w++)
